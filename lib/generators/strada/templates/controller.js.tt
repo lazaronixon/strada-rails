@@ -1,0 +1,19 @@
+import { BridgeComponent } from "@hotwired/strada"
+
+// Connects to data-controller="bridge--<%= @attribute %>"
+export default class extends BridgeComponent {
+  static component = "<%= @attribute %>"
+
+  connect() {
+    super.connect()
+    this.notifyBridgeOfConnect()
+  }
+
+  notifyBridgeOfConnect() {
+    const title = this.bridgeElement.title
+
+    this.send("connect", { title }, () => {
+      this.element.click()
+    })
+  }
+}

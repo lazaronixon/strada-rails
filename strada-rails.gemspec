@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
-require_relative "lib/strada/rails/version"
+require_relative "lib/strada/version"
 
 Gem::Specification.new do |spec|
   spec.name = "strada-rails"
-  spec.version = Strada::Rails::VERSION
+  spec.version = Strada::VERSION
   spec.authors = ["Nixon"]
   spec.email = ["lazaronixon@hotmail.com"]
 
@@ -23,4 +21,6 @@ Gem::Specification.new do |spec|
         f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor Gemfile])
     end
   end
+
+  spec.add_dependency "railties", ">= 6.0.0"
 end

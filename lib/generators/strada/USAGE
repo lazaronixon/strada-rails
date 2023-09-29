@@ -1,0 +1,10 @@
+Description:
+============
+    Generates a new Strada controller at the passed path. If running under node,
+    it'll also call the stimulus:manifest:update task to update the controllers/index.js.
+
+Examples:
+=========
+    bin/rails generate strada notice
+
+    creates: app/javascript/controllers/bridge/notice_controller.js

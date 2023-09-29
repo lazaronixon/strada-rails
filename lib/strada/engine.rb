@@ -6,7 +6,7 @@ module Strada
     # config.after_initialize do
     #   config.assets.precompile -= Strada::Engine::PRECOMPILE_ASSETS
     # end
-    PRECOMPILE_ASSETS = %w( strada.js strada.min.js strada.min.js.map ).freeze
+    PRECOMPILE_ASSETS = %w( strada.js ).freeze
 
     initializer "strada.assets" do
       if Rails.application.config.respond_to?(:assets)

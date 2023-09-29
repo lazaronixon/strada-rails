@@ -8,11 +8,10 @@ Read more on [strada.hotwired.dev](https://strada.hotwired.dev).
 
 ## Installation
 
-TODO: Write usage Installation here
+1. Run `bundle add strada-rails`
+2. Run `rails strada:install`
 
-## Usage
-
-TODO: Write usage instructions here
+The installer will automatically detect whether you're using an [import map](https://github.com/rails/importmap-rails) or [JavaScript bundler](https://github.com/rails/jsbundling-rails) to manage your application's JavaScript. If you're using an import map, the Strada dependencies will be pinned to the versions of the library included with this gem. If you're using Node, yarn will add the dependencies to your `package.json` file.
 
 ## Contributing
 
