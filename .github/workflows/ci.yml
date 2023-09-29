@@ -29,4 +29,16 @@ jobs:
           bundler: latest
           bundler-cache: true
       - name: Run tests
-        run: bin/test
+        run: bundle exec rake
+  user-journey:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: rm Gemfile.lock
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+          bundler: latest
+      - run: test/integration/user_journey_test.sh
+        shell: bash
