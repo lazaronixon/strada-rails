@@ -1,0 +1,14 @@
+<%% if notice.present? %>
+  <p style="color: green" data-controller="bridge--flash-message"><%%= notice %></p>
+<%% end %>
+
+<%%= render @<%= singular_table_name %> %>
+
+<div>
+  <div class="hide-on-mobile">
+    <%%= link_to "Edit this <%= human_name.downcase %>", <%= edit_helper(type: :path) %>, data: { controller: "bridge--nav-button", bridge_title: "Edit" } %> |
+    <%%= link_to "Back to <%= human_name.pluralize.downcase %>", <%= index_helper(type: :path) %> %>
+  </div>
+
+  <%%= link_to "Destroy this <%= human_name.downcase %>", <%= model_resource_name(prefix: "@") %>, "data-turbo-method": :delete %>
+</div>

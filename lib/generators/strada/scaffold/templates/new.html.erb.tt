@@ -1,0 +1,9 @@
+<h1 class="hide-on-mobile">New <%= human_name.downcase %></h1>
+
+<%%= render "form", <%= singular_table_name %>: @<%= singular_table_name %> %>
+
+<br>
+
+<div class="hide-on-mobile">
+  <%%= link_to "Back to <%= human_name.pluralize.downcase %>", <%= index_helper(type: :path) %> %>
+</div>

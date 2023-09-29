@@ -13,5 +13,9 @@ module Strada
         Rails.application.config.assets.precompile += PRECOMPILE_ASSETS
       end
     end
+
+    config.app_generators do |g|
+      g.template_engine :strada
+    end
   end
 end
