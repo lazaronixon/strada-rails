@@ -9,7 +9,7 @@ module Rails
   end
 end
 
-class StradaGeneratorTest < Rails::Generators::TestCase
+class Strada::GeneratorTest < Rails::Generators::TestCase
   tests StradaGenerator
   destination Rails.root
   setup :prepare_destination

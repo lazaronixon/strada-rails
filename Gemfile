@@ -6,3 +6,7 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake", "~> 13.0"
+
+group :test do
+  gem "actionmailer", ">= 6.0.0"
+end
