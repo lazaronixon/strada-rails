@@ -15,8 +15,15 @@
 }
 
 /*
+ * Hide when the "menu" component is registered.
+ */
+[data-bridge-components~=menu] [data-controller~=bridge--menu] {
+  display: none;
+}
+
+/*
  * Hide when the "flash-message" component is registered.
  */
 [data-bridge-components~=flash-message] [data-controller~=bridge--flash-message] {
-  display: none
+  display: none;
 }
