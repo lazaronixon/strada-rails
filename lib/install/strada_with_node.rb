@@ -9,6 +9,9 @@ HTML
 say "Copy bridge controllers"
 directory "#{__dir__}/app/javascript/controllers/bridge", "app/javascript/controllers/bridge"
 
+say "Update stimulus manifest"
+rails_command "stimulus:manifest:update"
+
 say "Copy strada stylesheet"
 copy_file "#{__dir__}/app/assets/stylesheets/strada.css", "app/assets/stylesheets/strada.css"
 
