@@ -5,7 +5,7 @@
 <%%= render @<%= singular_table_name %> %>
 
 <div>
-  <div class="hide-on-mobile">
+  <div class="hide-on-native">
     <%%= link_to "Edit this <%= human_name.downcase %>", <%= edit_helper(type: :path) %>, data: { controller: "bridge--nav-button", bridge_title: "Edit" } %> |
     <%%= link_to "Back to <%= human_name.pluralize.downcase %>", <%= index_helper(type: :path) %> %>
   </div>

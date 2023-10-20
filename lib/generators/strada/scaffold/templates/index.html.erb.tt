@@ -2,7 +2,7 @@
   <p style="color: green" data-controller="bridge--flash-message"><%%= notice %></p>
 <%% end %>
 
-<h1 class="hide-on-mobile"><%= human_name.pluralize %></h1>
+<h1 class="hide-on-native"><%= human_name.pluralize %></h1>
 
 <div id="<%= plural_table_name %>">
   <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
