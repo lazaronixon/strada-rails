@@ -1,5 +1,3 @@
-APPLICATION_LAYOUT_PATH = Rails.root.join("app/views/layouts/application.html.erb")
-
 destination = Pathname(destination_root)
 
 say "Copy bridge controllers"
@@ -16,13 +14,6 @@ unless destination.join("app/assets/application.css").exist?
     insert_into_file stylesheets.first.to_s, %(@import 'strada.css';)
   end
 end
-
-say "Add hide-on-native style in application layout"
-insert_into_file APPLICATION_LAYOUT_PATH.to_s, <<~ERB.indent(4).prepend("\n"), before: /^\s*<\/head>/
-  <% if turbo_native_app? %>
-    <style>.hide-on-native { display: none; }</style>
-  <% end %>
-ERB
 
 say "Install Strada"
 run "yarn add @hotwired/strada"
