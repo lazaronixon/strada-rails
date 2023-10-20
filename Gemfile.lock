@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    strada-rails (0.0.4)
+    strada-rails (0.0.5)
       railties (>= 6.0.0)
 
 GEM
